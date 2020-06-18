@@ -99,6 +99,12 @@ def display(preds, imgs, imshow=True, imwrite=False):
 
 
 out = invert_affine(framed_metas, out)
+
+
+# Get classes and bounding boxes:
+print(out[0]['rois'])
+print(out[0]['class_ids'])
+
 display(out, ori_imgs, imshow=False, imwrite=True)
 
 print('running speed test...')
